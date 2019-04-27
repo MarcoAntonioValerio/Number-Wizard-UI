@@ -8,6 +8,7 @@ public class scp_SceneLoader : MonoBehaviour
     
     public float timer = 5f;
     private float timeElapsed;
+    
 
     private void Update()
     {
@@ -17,11 +18,9 @@ public class scp_SceneLoader : MonoBehaviour
         {
             if (timeElapsed > timer)
             {
-                SceneManager.LoadScene(CurrentSceneIndex + 1);
+                LoadNextScene();
             }
-        }
-        
-        
+        }       
     }
 
     public void LoadNextScene()
@@ -29,6 +28,11 @@ public class scp_SceneLoader : MonoBehaviour
         int CurrentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(CurrentSceneIndex + 1);
         
+    }
+
+    public void StartNewGame()
+    {
+        SceneManager.LoadScene(1);
     }
     
     

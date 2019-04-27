@@ -270,7 +270,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Play Again
+  m_text: Start the Game
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 183ea4d46d08f324a849de1a46c55e29, type: 2}
   m_sharedMaterial: {fileID: 21035490951148642, guid: 183ea4d46d08f324a849de1a46c55e29,
@@ -340,10 +340,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 0}
-    characterCount: 10
+    characterCount: 14
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 2
+    spaceCount: 2
+    wordCount: 3
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -514,6 +514,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 366439402}
   m_CullTransparentMesh: 0
+--- !u!114 &946096712 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4315335369134294291, guid: 46b341e0ad25ef149b0fa2f3f7f5f691,
+    type: 3}
+  m_PrefabInstance: {fileID: 4315335369530380123}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e12335910feaf2142b1d26fdf277abc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1328883717
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,7 +621,7 @@ GameObject:
   - component: {fileID: 1411766950}
   - component: {fileID: 1411766949}
   m_Layer: 5
-  m_Name: btn_PlayAgain
+  m_Name: btn_StartButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -632,7 +644,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 262, y: -51.3}
+  m_AnchoredPosition: {x: -1, y: 0}
   m_SizeDelta: {x: 702.8, y: 246.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1411766949
@@ -655,9 +667,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 0.954017, b: 0.2971698, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.6796631, b: 0.2980392, a: 1}
-    m_PressedColor: {r: 1, g: 0.41859916, b: 0.2980392, a: 1}
+    m_NormalColor: {r: 1, g: 0.9190018, b: 0.1273585, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.6833914, b: 0.12549019, a: 1}
+    m_PressedColor: {r: 1, g: 0.3716894, b: 0.12549019, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -674,7 +686,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1411766950}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 946096712}
+        m_MethodName: LoadNextScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1411766950
@@ -726,7 +749,7 @@ GameObject:
   - component: {fileID: 1999950550}
   - component: {fileID: 1999950549}
   m_Layer: 5
-  m_Name: img_Ben
+  m_Name: img_Rick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -771,7 +794,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: ce287c88fac322e48864b4fe539f5156, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 07a1cded50049024c8d7d79a0b0c4f61, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -788,3 +811,72 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1999950547}
   m_CullTransparentMesh: 0
+--- !u!1001 &4315335369530380123
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4315335369134294300, guid: 46b341e0ad25ef149b0fa2f3f7f5f691,
+        type: 3}
+      propertyPath: m_Name
+      value: prfb_man_SceneLoader
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315335369134294290, guid: 46b341e0ad25ef149b0fa2f3f7f5f691,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315335369134294290, guid: 46b341e0ad25ef149b0fa2f3f7f5f691,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315335369134294290, guid: 46b341e0ad25ef149b0fa2f3f7f5f691,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315335369134294290, guid: 46b341e0ad25ef149b0fa2f3f7f5f691,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315335369134294290, guid: 46b341e0ad25ef149b0fa2f3f7f5f691,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315335369134294290, guid: 46b341e0ad25ef149b0fa2f3f7f5f691,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315335369134294290, guid: 46b341e0ad25ef149b0fa2f3f7f5f691,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315335369134294290, guid: 46b341e0ad25ef149b0fa2f3f7f5f691,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315335369134294290, guid: 46b341e0ad25ef149b0fa2f3f7f5f691,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315335369134294290, guid: 46b341e0ad25ef149b0fa2f3f7f5f691,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315335369134294290, guid: 46b341e0ad25ef149b0fa2f3f7f5f691,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 46b341e0ad25ef149b0fa2f3f7f5f691, type: 3}
