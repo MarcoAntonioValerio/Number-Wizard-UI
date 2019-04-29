@@ -25,8 +25,8 @@ public class scp_SceneLoader : MonoBehaviour
 
     public void LoadNextScene()
     {
-        int CurrentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(CurrentSceneIndex + 1);
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex + 1);
         
     }
 
@@ -34,6 +34,11 @@ public class scp_SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
-    
+
+    public void QuitTheGame()
+    {
+        Application.Quit();
+        Debug.Log("Quit is firing!");
+    }
     
 }
